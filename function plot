@@ -1,0 +1,59 @@
+# basic fuction
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10, 10, 100)
+y = x**2
+
+plt.plot(x, y, color='red', linestyle='--', label="y = x^2")
+
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Graph of y = x^2")
+
+plt.axhline(0, color='black')
+plt.axvline(0, color='black')
+plt.grid(True)
+plt.legend()
+
+plt.show()
+
+# linear fuction
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10, 10, 100)
+y = 2*x + 5
+
+plt.plot(x, y, color='blue', linestyle='-', label="y = 2x + 5")
+
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Linear Function")
+
+plt.axhline(0)
+plt.axvline(0)
+plt.grid(True)
+plt.legend()
+
+plt.show()
+
+#trignometric fuction
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-2*np.pi, 2*np.pi, 100)
+y = np.sin(x)
+
+plt.plot(x, y, color='green', linestyle=':', label="y = sin(x)")
+
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Sine Function")
+
+plt.axhline(0)
+plt.axvline(0)
+plt.grid(True)
+plt.legend()
+
+plt.show()
