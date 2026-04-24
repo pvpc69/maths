@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+y = [600,4000,2000,1500,700]
+labels = ['clothing','food','rent','petrol','mess']
+
+plt.pie(y, labels=labels, autopct='%1.1f%%')
+
+plt.title("Pie Chart")
+
+plt.show()
