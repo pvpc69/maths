@@ -1,0 +1,40 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+n = int(input("Enter number of points (n): "))
+a = int(input("Enter coefficient of x (a): "))
+r = int(input("Enter range of Points (r): "))
+
+print("\nUniformly spaced points on parabola y^2 = ax")
+print("----------------------------------------------")
+
+x_points = []
+y_points = []
+
+for i in range(n):
+    x = (r * i) / (n - 1)   # range from 0 to r
+    y = np.sqrt(a * x)
+
+    x_points.append(x)
+    y_points.append(y)
+
+    print(f"Point {i+1}: ({x:.4f}, {y:.4f})")
+
+# Smooth curve
+x_curve = np.linspace(0, r, 400)
+y_curve = np.sqrt(a * x_curve)
+
+# Plot upper and lower branch
+plt.plot(x_curve, y_curve, label="Upper branch")
+plt.plot(x_curve, -y_curve, label="Lower branch")
+
+plt.title("Parabola y^2 = ax")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+
+plt.axhline(0, color='black')
+plt.axvline(0, color='black')
+
+plt.grid(True)
+plt.legend()
+plt.show()
