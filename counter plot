@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = np.linspace(-10,10,30)
+y = np.linspace(-10,10,30)
+
+X,Y = np.meshgrid(x,y)
+Z = -(X**2) - (Y**2)
+
+ax = plt.axes(projection='3d')
+ax.contour3D(X,Y,Z,50)
+
+plt.title("3D Contour")
+plt.show()
