@@ -1,0 +1,28 @@
+r = float(input("Enter radius of circle:"))
+n = int(input("Enter number of points:"))
+
+print("the uniformly spaced values are:")
+print("--------------------------------------")
+
+x_points = []
+y_points = []
+
+for i in range(n):
+    theta = (2 * np.pi * i) / n
+    x = r * np.cos(theta)
+    y = r * np.sin(theta)
+    x_points.append(x)
+    y_points.append(y)
+    print(f"Points {i+1}:({x:.2f} {y:.2f})")
+angle = np.linspace(0, 2 *np.pi, 400)
+x_circle = r * np.cos(angle)
+y_circle = r * np.sin(angle)
+plt.plot(x_circle,y_circle,label="circle")
+plt.scatter(x_points,y_points,color='red',zorder=3)
+plt.title("Uniformly spaced points on circle")
+plt.gca().set_aspect("equal")
+plt.axvline(0,color='black')
+plt.axhline(0,color='black')
+plt.grid(True)
+plt.legend()
+plt.show()
