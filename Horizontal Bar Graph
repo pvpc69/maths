@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt
+
+x = [1,2,3,4,5]
+y = [600,4000,2000,1500,700]
+labels = ['clothing','food','rent','petrol','mess']
+
+plt.barh(x, y, tick_label=labels, color='red')
+
+plt.xlabel("Rupees")
+plt.ylabel("Items")
+plt.title("Horizontal Bar Graph")
+
+plt.show()
